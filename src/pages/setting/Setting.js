@@ -1,15 +1,16 @@
 import React from "react";
-import "./Panel.css";
+import "./Setting.css";
 import MyNavbar from "../../components/navbar/Navbar";
-function Panel() {
+function Setting() {
   return (
     <>
       <MyNavbar />
+
       <div>
-        <h1 style={{ textAlign: "center" }}>Welcome to Panel page!</h1>
+        <h1 style={{ textAlign: "center" }}>This is the Setting page!</h1>
       </div>
     </>
   );
 }
 
-export default Panel;
+export default Setting;
