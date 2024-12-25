@@ -1,8 +1,14 @@
-import { useRoutes } from "react-router-dom";
-import allRoutes from "./routes";
-function App() {
-  const routes = useRoutes(allRoutes);
-  return routes;
-}
+import { useEffect, useState } from "react";
+import TodoList from "./TodoList";
 
+function App() {
+  useEffect(() => {
+    console.log("App component mounted");
+  }, []);
+  return (
+    <>
+      <TodoList />
+    </>
+  );
+}
 export default App;
