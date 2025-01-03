@@ -1,0 +1,32 @@
+.todoItemContainer {
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todoItemContainer:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+.todoItemContainer .custom-textarea {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+.todoItemContainer textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+.todoItemContainer button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todoItemContainer button:hover {
+  transform: scale(1.05);
+}
