@@ -16,7 +16,7 @@
 }
 
 .todo-list-container {
-  max-width: 800px; /* Optional: limit the width to make it look cleaner */
+  max-width: 800px;
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -31,4 +31,44 @@
   width: 90%; /* Set the width to 90% */
   margin: 0 auto; /* Center the textarea */
   display: block; /* Ensure it behaves like a block element */
+}
+
+/* TodoList.css */
+.todo-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9f9f9;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+hr {
+  border-color: #ccc;
+  margin: 20px 0;
+}
+
+/* TodoList.css */
+.addBtn {
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(83, 108, 233);
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  transition: background-color 0.3s ease;
+}
+
+.addBtn:hover {
+  background-color: rgb(68, 87, 183);
+}
+
+.addBtn:active {
+  background-color: rgb(53, 68, 144);
 }

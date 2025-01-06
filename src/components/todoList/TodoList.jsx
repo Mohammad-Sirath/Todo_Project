@@ -35,12 +35,12 @@ function TodoList() {
   };
 
   return (
-    <Container className="mt-4 d-flex justify-content-center align-items-center">
-      <div className="todo-list-container w-100 p-3">
+    <Container className="mt-4">
+      <div className="todo-list-container p-3 shadow rounded">
         <h1 className="text-center mb-4">Todo List</h1>
         <hr />
-        <Row className="mb-3">
-          <Col xs={12} md={8} className="mx-auto">
+        <Row className="mb-3 justify-content-center">
+          <Col xs={12} md={8}>
             <Form.Group controlId="newTodo">
               <Form.Control
                 as="textarea"
@@ -48,18 +48,21 @@ function TodoList() {
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
                 placeholder="Add a new task"
-                className="mb-3 custom-textarea" // Added custom class for styling
+                className="mb-3"
               />
             </Form.Group>
           </Col>
-          <Col xs={12} md={4} className="mx-auto">
-            <Button
-              variant="primary"
-              onClick={addTodoHandler}
-              className="w-100"
-            >
-              Add Todo
-            </Button>
+          <Col xs={12} md={4} className="d-flex justify-content-center">
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Button
+                variant="primary"
+                onClick={addTodoHandler}
+                className="w-75 addBtn"
+              >
+                Add Todo
+              </Button>
+            </div>
           </Col>
         </Row>
         {todos.map((todo) => (
@@ -67,7 +70,7 @@ function TodoList() {
             key={todo.id}
             {...todo}
             onRemove={() => deleteTodoHandler(todo.id)}
-            onEdit={editTodoHandler} // Pass the edit function
+            onEdit={editTodoHandler}
           />
         ))}
       </div>
